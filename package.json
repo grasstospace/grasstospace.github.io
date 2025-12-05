@@ -2,6 +2,7 @@
   "name": "team-website",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://grasstospace.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",

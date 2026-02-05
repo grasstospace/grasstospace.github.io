@@ -2,28 +2,46 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Grass to Space Website</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Nothing here yet, this is the Grass to Space ARC team.
-      </p>
-    </>
-  )
-}
+    const team = [
+  {
+    name: "Rishabh Gujarathi",
+    role: "Website dude",
+    bio: "I'm doing this beause I was forced to."
+  },
+  {
+    name: "whoever wants to go here",
+    role: "just pick something",
+    bio: "don't say anything cringe."
+  },
+  {
+    name: "whoever wants to go here",
+    role: "just pick something",
+    bio: "don't say anything cringe."
+  },
+    {
+    name: "whoever wants to go here",
+    role: "just pick something",
+    bio: "don't say anything cringe."
+  },
+    {
+    name: "whoever wants to go here",
+    role: "just pick something",
+    bio: "don't say anything cringe."
+  },
+]
 
-export default App
+<section>
+  <h2>Meet the Team</h2>
+
+  <div className="cards">
+    {team.map((member) => (
+      <div className="card" key={member.name}>
+        <h3>{member.name}</h3>
+        <p className="role">{member.role}</p>
+        <p>{member.bio}</p>
+      </div>
+    ))}
+  </div>
+</section>

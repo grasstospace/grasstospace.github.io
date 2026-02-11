@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -9,6 +10,8 @@ body {
   color: #eaeaea;
 }
 
+
+
 .page {
   max-width: 1100px;
   margin: auto;
@@ -17,7 +20,7 @@ body {
 
 .hero {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .hero h1 {
@@ -26,22 +29,37 @@ body {
 }
 
 .hero p {
-  max-width: 700px;
-  margin: auto;
+  max-width: 720px;
+  margin: 0 auto;
   font-size: 1.1rem;
   color: #b6c0cc;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+.hero-photo-placeholder {
+  margin-top: 2rem;
+  height: 240px;
+  border-radius: 16px;
+  background: #0f1623;
+  border: 1px dashed #2a3444;
 }
+
+
+section {
+  margin-bottom: 4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
+
 
 .card {
   background: #151b23;
@@ -50,6 +68,7 @@ h2 {
   border: 1px solid #222;
   text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 140px;
 }
 
 .card:hover {
@@ -73,3 +92,67 @@ h2 {
   line-height: 1.5;
   margin: 0;
 }
+
+
+.img-placeholder,
+.photo-placeholder {
+  margin-top: 1rem;
+  height: 160px;
+  border-radius: 12px;
+  background: #0f1623;
+  border: 1px dashed #2a3444;
+}
+
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat {
+  background: #151b23;
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stat p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #9aa4b2;
+}
+
+.section-desc {
+  max-width: 720px;
+  color: #b6c0cc;
+  margin-bottom: 1.5rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+
+footer {
+  border-top: 1px solid #222;
+  padding-top: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+

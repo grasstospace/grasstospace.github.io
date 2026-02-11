@@ -1,9 +1,5 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
 export default function App() {
-  return (
     const team = [
   {
     name: "Rishabh Gujarathi",
@@ -30,8 +26,8 @@ export default function App() {
     role: "just pick something",
     bio: "don't say anything cringe."
   },
-]
-
+];
+return (
 <section>
   <h2>Meet the Team</h2>
 
@@ -45,3 +41,5 @@ export default function App() {
     ))}
   </div>
 </section>
+  );
+}

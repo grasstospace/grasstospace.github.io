@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/ARC-team/',
+  base: '/',
   build: {
     outDir: 'docs',
     emptyOutDir: true,

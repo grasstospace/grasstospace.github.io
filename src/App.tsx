@@ -5,8 +5,7 @@ export default function App() {
     <div className="page">
       <header className="hero">
         <h1>Our Rocketry Team 🚀</h1>
-        <p></p>
-
+        <p>Designing, building, and launching rockets</p>
         <div className="hero-photo-placeholder"></div>
       </header>
 
@@ -17,8 +16,6 @@ export default function App() {
           <TeamCard name="" role="" bio="" />
           <TeamCard name="" role="" bio="" />
           <TeamCard name="" role="" bio="" />
-          <TeamCard name="" role="" bio="" />
-
         </div>
       </section>
 
@@ -51,7 +48,7 @@ export default function App() {
       </section>
 
       <section>
-        <h2>Group photos</h2>
+        <h2>Group Photos</h2>
         <p className="section-desc"></p>
 
         <div className="photo-grid">
@@ -68,7 +65,15 @@ export default function App() {
   )
 }
 
-function TeamCard({ name, role, bio }: any) {
+/* ---------- Components ---------- */
+
+type TeamCardProps = {
+  name: string
+  role: string
+  bio: string
+}
+
+function TeamCard({ name, role, bio }: TeamCardProps) {
   return (
     <div className="card">
       <h3>{name}</h3>
@@ -78,7 +83,12 @@ function TeamCard({ name, role, bio }: any) {
   )
 }
 
-function RocketCard({ name, description }: any) {
+type RocketCardProps = {
+  name: string
+  description: string
+}
+
+function RocketCard({ name, description }: RocketCardProps) {
   return (
     <div className="card">
       <h3>{name}</h3>
@@ -88,7 +98,12 @@ function RocketCard({ name, description }: any) {
   )
 }
 
-function PartCard({ name, description }: any) {
+type PartCardProps = {
+  name: string
+  description: string
+}
+
+function PartCard({ name, description }: PartCardProps) {
   return (
     <div className="card">
       <h3>{name}</h3>
@@ -98,7 +113,12 @@ function PartCard({ name, description }: any) {
   )
 }
 
-function Stat({ label, value }: any) {
+type StatProps = {
+  label: string
+  value: string
+}
+
+function Stat({ label, value }: StatProps) {
   return (
     <div className="stat">
       <h3>{value}</h3>

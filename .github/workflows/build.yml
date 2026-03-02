@@ -10,17 +10,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
-      with:
-        node-version: 20
-        cache: 'pnpm'
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v3
-      with: 
-        version: 9
-    - name: Install dependencies
-      uses: pnpm install
-    - name: Build with pnpm
-      uses: pnpm run build
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with: 
+          version: 9
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build with pnpm
+        run: pnpm run build

@@ -1,9 +1,21 @@
-/* ---------- Page Container ---------- */
+/* ---------- Global & theme ---------- */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background: url('/landscape.jpg') center/cover fixed no-repeat;
+  color: #eef2f7;
+}
+
+/* add a gentle grass gradient at bottom for theme */
 .page {
   max-width: 1100px;
   width: 100%;
   padding: 2rem;
   text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  margin: 2rem auto;
 }
 
 /* ---------- Hero ---------- */
@@ -145,6 +157,52 @@ footer {
   padding-top: 2rem;
   font-size: 0.85rem;
   color: #6b7280;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.navbar button {
+  padding: 0.5rem 1rem;
+  background: #1f2937;
+  color: #eef2f7;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.navbar button:hover {
+  background: #374151;
+}
+
+/* ---------- 3D canvas ---------- */
+.canvas-3d {
+  height: 100vh;
+  width: 100vw;
+}
+
+.instructions {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #eef2f7;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  z-index: 1001;
 }
 
 /* ---------- Mobile ---------- */
